@@ -1,9 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { CSSTransitionGroup } from 'react-transition-group';
-import Question from '../components/Question';
-import QuestionCount from '../components/QuestionCount';
-import AnswerOption from '../components/AnswerOption';
+import React from "react";
+import PropTypes from "prop-types";
+import { CSSTransitionGroup } from "react-transition-group";
+import Question from "../components/Question";
+import QuestionCount from "../components/QuestionCount";
+import AnswerOption from "../components/AnswerOption";
 
 function Quiz(props) {
   function renderAnswerOptions(key) {
@@ -21,7 +21,7 @@ function Quiz(props) {
 
   return (
     <CSSTransitionGroup
-      className="container"
+      className=""
       component="div"
       transitionName="fade"
       transitionEnterTimeout={800}

@@ -104,33 +104,8 @@ class App extends Component {
   }
 
   setResults(result) {
-    const answer = "";
     if (result.length >= 1) {
-      result.forEach(element => {
-        switch (result[0]) {
-          case "May":
-            answer.concat("May It Be");
-          case "Echoes":
-            answer.concat("Echoes in Rain");
-          case "Storms":
-            answer.concat("Storms in Africa");
-          case "Only":
-            answer.concat("Only Time");
-          case "Caribbean":
-            answer.concat("Caribbean Blue");
-          case "If":
-            answer.concat("If I Could Be Where You Are");
-          case "Wild":
-            answer.concat("Wild Child");
-          case "Anywhere":
-            answer.concat("Anywhere Is");
-          case "Orinoco":
-            answer.concat("Orinoco Flow");
-          default:
-            answer = "";
-        }
-      });
-      this.setState({ result: answer });
+      this.setState({ result: result });
     } else {
       this.setState({ result: "Undetermined" });
     }
@@ -150,6 +125,10 @@ class App extends Component {
   }
 
   renderResult() {
+    return <Result quizResult={this.getResults()} />;
+  }
+
+  oldRenderResult() {
     return <Result quizResult={this.state.result} />;
   }
 
