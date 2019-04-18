@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/enyagram/precache-manifest.b853ce52491b49a0dceb0b00d83ad0e1.js"
+  "/enyagram/precache-manifest.62dba4d8c52b101c388207c476d6fe03.js"
 );
 
 workbox.clientsClaim();
