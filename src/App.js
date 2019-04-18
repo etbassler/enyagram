@@ -25,7 +25,8 @@ class App extends Component {
         Anywhere: 0,
         Orinoco: 0
       },
-      result: ""
+      result: "",
+      wings: ""
     };
 
     this.handleAnswerSelected = this.handleAnswerSelected.bind(this);
@@ -67,7 +68,10 @@ class App extends Component {
     if (this.state.questionId < quizQuestions.length) {
       setTimeout(() => this.setNextQuestion(), 300);
     } else {
-      setTimeout(() => this.setResults(this.getResults()), 300);
+      setTimeout(
+        () => this.setResults(this.getResults(), this.getWings()),
+        300
+      );
     }
   }
 
@@ -102,10 +106,20 @@ class App extends Component {
 
     return answersCountKeys.filter(key => answersCount[key] === maxAnswerCount);
   }
+  getWings() {
+    const wingsCount = this.state.answersCount;
+    const wingsCountKeys = Object.keys(wingsCount);
+    const wingsCountValues = wingsCountKeys.map(key => wingsCount[key]);
+    const maxWingsCount = Math.max.apply(null, wingsCountValues);
+    wingsCountValues.splice(wingsCountValues.indexOf(maxWingsCount), 1); // remove max from the array
+    const secondMax = Math.max.apply(null, wingsCountValues); // get the 2nd max
+    return wingsCountKeys.filter(key => wingsCount[key] === secondMax);
+  }
 
-  setResults(result) {
+  setResults(result, wings) {
     if (result.length >= 1) {
       this.setState({ result: result });
+      this.setState({ wings: wings });
     } else {
       this.setState({ result: "Undetermined" });
     }
@@ -125,7 +139,9 @@ class App extends Component {
   }
 
   renderResult() {
-    return <Result quizResult={this.getResults()} />;
+    return (
+      <Result quizResult={this.getResults()} quizWings={this.getWings()} />
+    );
   }
 
   oldRenderResult() {

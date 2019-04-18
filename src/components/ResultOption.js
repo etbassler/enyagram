@@ -59,14 +59,13 @@ var resultOptions = [
 
 function ResultOption(props) {
   const result = resultOptions.find(item => item.slug === props.option);
-  console.log(result);
   return (
-    <div class="col-sm-6 mb-4">
-      <div class="card">
-        <div class="card-body">
-          <h3 class="card-title">{result.full}</h3>
+    <div className="col-sm-6 mb-4">
+      <div className="card">
+        <div className="card-body">
+          <h3 className="card-title">{result.full}</h3>
 
-          <p class="card-text">{result.description}</p>
+          <p className="card-text">{result.description}</p>
         </div>
       </div>
     </div>
