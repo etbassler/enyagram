@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import quizQuestions from "./api/quizQuestions";
 import Quiz from "./components/Quiz";
 import Result from "./components/Result";
+import Header from "./components/Header";
+
 import "./App.css";
 
 class App extends Component {
@@ -113,7 +115,8 @@ class App extends Component {
     const maxWingsCount = Math.max.apply(null, wingsCountValues);
     wingsCountValues.splice(wingsCountValues.indexOf(maxWingsCount), 1); // remove max from the array
     const secondMax = Math.max.apply(null, wingsCountValues); // get the 2nd max
-    return wingsCountKeys.filter(key => wingsCount[key] === secondMax);
+    const wings = wingsCountKeys.filter(key => wingsCount[key] === secondMax);
+    return wings.slice(0, 1);
   }
 
   setResults(result, wings) {
@@ -147,13 +150,11 @@ class App extends Component {
   oldRenderResult() {
     return <Result quizResult={this.state.result} />;
   }
-
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <h2>The Enyagram</h2>
-        </div>
+        <Header />
+
         {this.state.result ? this.renderResult() : this.renderQuiz()}
       </div>
     );

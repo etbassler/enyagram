@@ -24,9 +24,7 @@ function many() {
 function Result(props) {
   const result = props.quizResult;
   const wings = props.quizWings;
-  if (result.length > 1) {
-    wings.length = 0;
-  }
+
   return (
     <CSSTransitionGroup
       className="result"
@@ -48,9 +46,9 @@ function Result(props) {
         <div className="col-sm-12 mb-2">
           {result.length > 1 ? "" : "Your Enyagram Wings"}
         </div>
-        {wings.map((option, i) => (
-          <ResultOption key={i} option={option} />
-        ))}
+        {result.length !== 0
+          ? wings.map((option, i) => <ResultOption key={i} option={option} />)
+          : null}
       </div>
     </CSSTransitionGroup>
   );

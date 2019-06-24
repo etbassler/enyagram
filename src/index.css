@@ -29,8 +29,16 @@ body {
   }
 }
 
+/* Home Component */
+
+.home-list li {
+  margin-bottom: 15px;
+}
+.home-button {
+}
+
 /* Result Component */
-. {
+.result {
   padding: 1.5rem 2.5rem;
 }
 
