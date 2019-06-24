@@ -8,9 +8,9 @@ import About from "./About";
 const Router = () => (
   <BrowserRouter>
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/quiz" component={App} />
+      <Route exact path="/enyagram" component={Home} />
+      <Route path="/enyagram/about" component={About} />
+      <Route path="/enyagram/quiz" component={App} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
