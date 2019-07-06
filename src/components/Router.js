@@ -8,9 +8,9 @@ import About from "./About";
 const Router = () => (
   <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
-      <Route exact path="/" component={Home} />
-      <Route path="/about" component={About} />
-      <Route path="/quiz" component={App} />
+      <Route exact path={process.env.PUBLIC_URL + "/"} component={Home} />
+      <Route path={process.env.PUBLIC_URL + "/about"} component={About} />
+      <Route path={process.env.PUBLIC_URL + "/quiz"} component={App} />
       <Route component={NotFound} />
     </Switch>
   </BrowserRouter>
