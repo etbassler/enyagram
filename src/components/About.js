@@ -38,7 +38,7 @@ const About = () => (
         personality profile that will reveal one&rsquo;s realms and the inner
         workings of their very self.
       </p>
-      <a href="quiz" className="btn btn-primary p-4 home-button">
+      <a href="/quiz" className="btn btn-primary p-4 home-button">
         Take the Quiz
       </a>
     </div>

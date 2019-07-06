@@ -22,7 +22,7 @@ const Home = () => (
         </li>
         <li>Take the Enyagram quiz.</li>
       </ol>
-      <a href="quiz" className="btn btn-primary p-4 home-button">
+      <a href="/quiz" className="btn btn-primary p-4 home-button">
         Take the Quiz
       </a>
     </div>

@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => (
   <div id="header">
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="/enyagram">
+      <a className="navbar-brand" href="/">
         <h1>The Enyagram</h1>
       </a>
       <button
@@ -21,12 +21,12 @@ const Header = () => (
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <a className="nav-link" href="/enyagram/About">
+            <a className="nav-link" href="/About">
               About the Enyagram
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/enyagram/quiz">
+            <a className="nav-link" href="/quiz">
               The Quiz
             </a>
           </li>
