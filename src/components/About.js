@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import { Link } from "react-router-dom";
 
 const About = () => (
   <>
@@ -38,9 +39,12 @@ const About = () => (
         personality profile that will reveal one&rsquo;s realms and the inner
         workings of their very self.
       </p>
-      <a href="/quiz" className="btn btn-primary p-4 home-button">
+      <Link
+        to={process.env.PUBLIC_URL + "/"}
+        className="btn btn-primary p-4 home-button"
+      >
         Take the Quiz
-      </a>
+      </Link>
     </div>
   </>
 );

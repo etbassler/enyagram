@@ -1,5 +1,6 @@
 import React from "react";
 import Header from "./Header";
+import { Link } from "react-router-dom";
 
 const Home = () => (
   <>
@@ -22,9 +23,12 @@ const Home = () => (
         </li>
         <li>Take the Enyagram quiz.</li>
       </ol>
-      <a href="/quiz" className="btn btn-primary p-4 home-button">
-        Take the Quiz
-      </a>
+      <Link
+        className="btn btn-primary p-4 home-button"
+        to={process.env.PUBLIC_URL + "/quiz"}
+      >
+        About the Enyagram
+      </Link>
     </div>
   </>
 );

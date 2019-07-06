@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Header = () => (
   <div id="header">
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-      <a className="navbar-brand" href="/">
+      <Link className="navbar-brand" to={process.env.PUBLIC_URL + "/"}>
         <h1>The Enyagram</h1>
-      </a>
+      </Link>
       <button
         className="navbar-toggler"
         type="button"
@@ -21,14 +22,14 @@ const Header = () => (
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <a className="nav-link" href="/About">
+            <Link className="nav-link" to={process.env.PUBLIC_URL + "/about"}>
               About the Enyagram
-            </a>
+            </Link>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/quiz">
+            <Link className="nav-link" to={process.env.PUBLIC_URL + "/quiz"}>
               The Quiz
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
