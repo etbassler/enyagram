@@ -1,4 +1,8 @@
-# React Quiz
+# Enyagram React Quiz
+
+## Note: Recently added react-router-dom which broke gh-pages instance of this quiz. Will fix soon.
+
+Adapted from [react-multi-choice-quiz](https://github.com/mitchgavan/react-multi-choice-quiz)
 
 [View demo](http://mitchgavan.github.io/react-multi-choice-quiz/)
 
