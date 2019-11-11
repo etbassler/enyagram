@@ -1,5 +1,5 @@
 import React from "react";
-import { HashRouter, Route, Switch, Link } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import App from "../App";
 import NotFound from "./NotFound";
 import Home from "./Home";

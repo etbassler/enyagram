@@ -27,7 +27,7 @@ const Home = () => (
         className="btn btn-primary p-4 home-button"
         to={process.env.PUBLIC_URL + "/quiz"}
       >
-        About the Enyagram
+        Take the Enyagram
       </Link>
     </div>
   </>

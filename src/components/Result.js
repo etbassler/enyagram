@@ -39,14 +39,14 @@ function Result(props) {
         <div className="col-sm-12 mb-2">
           {result.length > 1 ? many() : "Your Enyagram results:"}
         </div>
-        {result.map((option, i) => (
+        {result.slice(0, 2).map((option, i) => (
           <ResultOption key={i} option={option} />
         ))}
 
         <div className="col-sm-12 mb-2">
-          {result.length > 1 ? "" : "Your Enyagram Wings"}
+          {wings.length !== 0 && result.length == 1 ? "Your Enyagram Wing" : ""}
         </div>
-        {result.length !== 0
+        {wings.length !== 0 && result.length == 1
           ? wings.map((option, i) => <ResultOption key={i} option={option} />)
           : null}
       </div>

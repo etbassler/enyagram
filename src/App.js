@@ -113,13 +113,16 @@ class App extends Component {
     const wingsCountKeys = Object.keys(wingsCount);
     const wingsCountValues = wingsCountKeys.map(key => wingsCount[key]);
     const maxWingsCount = Math.max.apply(null, wingsCountValues);
+
     wingsCountValues.splice(wingsCountValues.indexOf(maxWingsCount), 1); // remove max from the array
+
     const secondMax = Math.max.apply(null, wingsCountValues); // get the 2nd max
     const wings = wingsCountKeys.filter(key => wingsCount[key] === secondMax);
     return wings.slice(0, 1);
   }
 
   setResults(result, wings) {
+    console.log(result, wings);
     if (result.length >= 1) {
       this.setState({ result: result });
       this.setState({ wings: wings });
@@ -147,9 +150,6 @@ class App extends Component {
     );
   }
 
-  oldRenderResult() {
-    return <Result quizResult={this.state.result} />;
-  }
   render() {
     return (
       <div className="App">
