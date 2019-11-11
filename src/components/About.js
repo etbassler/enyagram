@@ -40,7 +40,7 @@ const About = () => (
         workings of their very self.
       </p>
       <Link
-        to={process.env.PUBLIC_URL + "/"}
+        to={process.env.PUBLIC_URL + "/quiz"}
         className="btn btn-primary p-4 home-button"
       >
         Take the Quiz
